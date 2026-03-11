@@ -5,10 +5,18 @@ public class Meow {
         this.meowing = meowing;
     }
 
-    public void timeToMeow(){
-        for(int i = 0; i < meowing; i++){
+    public void timeToMeow() {
+        for (int i = 0; i < meowing; i++) {
             meowcount++;
-            System.out.println("i just meowed and its my: " + meowcount + " time");
+            System.out.print("I just meowed and its my: ");
+            switch (meowcount%10) {
+                case 1 -> System.out.print(meowcount+ "st ");
+                case 2 -> System.out.print(meowcount+ "nd ");
+                case 3 -> System.out.print(meowcount+ "rd ");
+                default -> System.out.print(meowcount+ "th ");
+            }
+
+            System.out.println("time");
         }
     }
 
