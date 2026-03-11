@@ -19,5 +19,8 @@ public class Meow {
             System.out.println("time");
         }
     }
+    public void setMeowing(int meowing) {
+        this.meowing = meowing;
+    }
 
 }

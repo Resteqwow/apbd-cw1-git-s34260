@@ -13,7 +13,8 @@ public class Main {
         }
         Meow meow = new Meow(5);
         meow.timeToMeow();
-
+        meow.setMeowing(10);
+        meow.timeToMeow();
 
     }
 }
