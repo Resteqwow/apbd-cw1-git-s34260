@@ -9,13 +9,17 @@ public class Meow {
         for (int i = 0; i < meowing; i++) {
             meowcount++;
             System.out.print("I just meowed and its my: ");
-            switch (meowcount%10) {
-                case 1 -> System.out.print(meowcount+ "st ");
-                case 2 -> System.out.print(meowcount+ "nd ");
-                case 3 -> System.out.print(meowcount+ "rd ");
-                default -> System.out.print(meowcount+ "th ");
+            if(meowcount>10 && meowcount<20){
+                System.out.print(meowcount + "th ");
             }
-
+            else {
+                switch (meowcount % 10) {
+                    case 1 -> System.out.print(meowcount + "st ");
+                    case 2 -> System.out.print(meowcount + "nd ");
+                    case 3 -> System.out.print(meowcount + "rd ");
+                    default -> System.out.print(meowcount + "th ");
+                }
+            }
             System.out.println("time");
         }
     }
