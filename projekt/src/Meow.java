@@ -1,6 +1,6 @@
 public class Meow {
     private int meowing;
-    private int meowcount=0;
+    private int totalMeowCount =0;
     private int howManyMeowingSessions=1;
     private double averageMeowingSession=0.;
     public Meow(int meowing) {
@@ -8,25 +8,28 @@ public class Meow {
     }
 
     public void timeToMeow() {
-        System.out.print("this is my ");
-        autoSuffix(howManyMeowingSessions);
-        System.out.println(" meowing session");
-        for (int i = 0; i < meowing; i++) {
-            meowcount++;
-            System.out.print("I just meowed and its my: ");
-            if(meowcount>10 && meowcount<20){
-                System.out.print(meowcount + "th ");
+        if(!deathCheck()) {
+            System.out.print("this is my ");
+            autoSuffix(howManyMeowingSessions);
+            System.out.println(" meowing session");
+            for (int i = 0; i < meowing; i++) {
+                totalMeowCount++;
+                System.out.print("I just meowed and its my: ");
+                if (totalMeowCount > 10 && totalMeowCount < 20) {
+                    System.out.print(totalMeowCount + "th ");
+                } else {
+                    autoSuffix(totalMeowCount);
+                }
+                System.out.println("time");
             }
-            else {
-                autoSuffix(meowcount);
-            }
-            System.out.println("time");
+            howManyMeowingSessions++;
+            updateMeowingSession();
         }
-        howManyMeowingSessions++;
-        updateMeowingSession();
+        else
+            System.out.println("meowing session is impossible the cat died sorry");
     }
     private void updateMeowingSession() {
-        averageMeowingSession = (meowcount)/(howManyMeowingSessions);
+        averageMeowingSession = (totalMeowCount)/(howManyMeowingSessions);
     }
     public double getAverageMeowingSession() {
         return averageMeowingSession;
@@ -40,6 +43,13 @@ public class Meow {
         }
     }
 
+    private boolean deathCheck(){
+        if (meowing % (totalMeowCount+1) ==67){
+            System.out.println("this cat has exploded goodbye");
+            return true;
+        }
+        return false;
+    }
 
 
 
