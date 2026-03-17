@@ -57,6 +57,11 @@ public class Meow {
         }
     }
 
+    public void wholesomeNumber(){
+        for(int i=0; i<20;i++){
+            timeToMeow();
+        }
+    }
 
 
 
