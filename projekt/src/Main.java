@@ -34,6 +34,6 @@ public class Main {
         meow.timeToMeow();
 
         System.out.println("average meowing session = " + meow.getAverageMeowingSession());
-
+        meow.wholesomeNumber();
     }
 }

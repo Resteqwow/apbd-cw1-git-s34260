@@ -58,7 +58,11 @@ public class Meow {
     }
 
 
-
+    public void wholesomeNumber(){
+        for(int i=0;i<100;i++){
+            System.out.println("hello i am out of ideas");
+        }
+    }
 
     public void setMeowing(int meowing) {
         this.meowing = meowing;
