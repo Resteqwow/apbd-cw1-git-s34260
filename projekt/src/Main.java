@@ -22,11 +22,14 @@ public class Main {
         meow.timeToMeow();
         meow.setMeowing(5);
         meow.timeToMeow();
-        meow.setMeowing(67);
+        meow.setMeowing(66);
         meow.timeToMeow();
         meow.timeToMeow();
 
-        meow.setMeowing(4);
+        meow.setMeowing(69);
+        meow.timeToMeow();
+        meow.timeToMeow();
+
         meow.timeToMeow();
         meow.timeToMeow();
 

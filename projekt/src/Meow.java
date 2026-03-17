@@ -15,11 +15,8 @@ public class Meow {
             for (int i = 0; i < meowing; i++) {
                 totalMeowCount++;
                 System.out.print("I just meowed and its my: ");
-                if (totalMeowCount > 10 && totalMeowCount < 20) {
-                    System.out.print(totalMeowCount + "th ");
-                } else {
-                    autoSuffix(totalMeowCount);
-                }
+                autoSuffix(totalMeowCount);
+
                 System.out.println("time");
             }
             howManyMeowingSessions++;
@@ -35,11 +32,15 @@ public class Meow {
         return averageMeowingSession;
     }
     private void autoSuffix(int number){
+        if (number > 10 && number < 20) {
+            System.out.print(number + "th ");
+        } else {
         switch (number % 10) {
             case 1 -> System.out.print(number + "st ");
             case 2 -> System.out.print(number + "nd ");
             case 3 -> System.out.print(number + "rd ");
             default -> System.out.print(number + "th ");
+        }
         }
     }
 
