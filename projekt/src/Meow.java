@@ -1,6 +1,8 @@
 public class Meow {
     private int meowing;
     private int meowcount=0;
+    private int howManyMeowingSessions=0;
+    private double averageMeowingSession=0.;
     public Meow(int meowing) {
         this.meowing = meowing;
     }
@@ -22,7 +24,17 @@ public class Meow {
             }
             System.out.println("time");
         }
+        howManyMeowingSessions++;
+        updateMeowingSession();
     }
+    private void updateMeowingSession() {
+        averageMeowingSession = (meowing)/(howManyMeowingSessions);
+    }
+
+
+
+
+
     public void setMeowing(int meowing) {
         this.meowing = meowing;
     }
