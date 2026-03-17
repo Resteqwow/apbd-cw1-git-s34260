@@ -21,7 +21,7 @@ public class Meow {
                 System.out.println("time");
             }
             howManyMeowingSessions++;
-            
+
             updateMeowingSession();
             deathCheck();
         }
@@ -51,8 +51,12 @@ public class Meow {
         if (meowing % (totalMeowCount) ==67){
             System.out.println("this cat has exploded goodbye");
             isDead=true;
+        } else
+        if (meowing % totalMeowCount > 57 && meowing % totalMeowCount < 77) {
+            System.out.println("this cat has almost exploded");
         }
     }
+
 
 
 
