@@ -18,6 +18,13 @@ public class Main {
 
         meow.setMeowing(3);
         meow.timeToMeow();
+        meow.setMeowing(4);
+        meow.timeToMeow();
+        meow.setMeowing(5);
+        meow.timeToMeow();
+        meow.setMeowing(67);
+        meow.timeToMeow();
+        meow.timeToMeow();
 
         meow.setMeowing(4);
         meow.timeToMeow();
