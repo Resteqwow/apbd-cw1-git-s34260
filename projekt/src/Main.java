@@ -16,5 +16,10 @@ public class Main {
         meow.setMeowing(20);
         meow.timeToMeow();
 
+        meow.setMeowing(3);
+        meow.timeToMeow();
+
+        System.out.println("average meowing session = " + meow.getAverageMeowingSession());
+
     }
 }
