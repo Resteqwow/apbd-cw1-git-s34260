@@ -3,12 +3,13 @@ public class Meow {
     private int totalMeowCount =0;
     private int howManyMeowingSessions=1;
     private double averageMeowingSession=0.;
+    private boolean isDead=false;
     public Meow(int meowing) {
         this.meowing = meowing;
     }
 
     public void timeToMeow() {
-        if(!deathCheck()) {
+        if(!isDead) {
             System.out.print("this is my ");
             autoSuffix(howManyMeowingSessions);
             System.out.println(" meowing session");
@@ -20,7 +21,9 @@ public class Meow {
                 System.out.println("time");
             }
             howManyMeowingSessions++;
+            
             updateMeowingSession();
+            deathCheck();
         }
         else
             System.out.println("meowing session is impossible the cat died sorry");
@@ -44,12 +47,11 @@ public class Meow {
         }
     }
 
-    private boolean deathCheck(){
-        if (meowing % (totalMeowCount+1) ==67){
+    private void deathCheck(){
+        if (meowing % (totalMeowCount) ==67){
             System.out.println("this cat has exploded goodbye");
-            return true;
+            isDead=true;
         }
-        return false;
     }
 
 
